@@ -1,6 +1,8 @@
 <script>
+import PokémonCard from './PokémonCard.vue';
 export default {
-    name: 'PokémonList'
+    name: 'PokémonList',
+    components: { PokémonCard }
 }
 
 </script>
@@ -107,4 +109,5 @@ export default {
 
 .col-2 {
     margin: 0 20px
-}</style>
+}
+</style>
