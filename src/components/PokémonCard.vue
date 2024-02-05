@@ -1,16 +1,23 @@
 <script>
 export default {
-    name: 'Pokémon Card'
+    name: 'Pokémon Card',
+    props: {
+        pokemonName: String,
+        image: String,
+        type: String,
+        pokemonNumber: Number
+
+
+    }
+
 }
 </script>
 <template>
-    <div class="col-2 h-50 d-flex align-items-center">
-        <div class="card p-4 text-center">
-            <img class="img-fluid rounded-circle " src="https://img.pokemondb.net/artwork/large/bulbasaur.jpg" alt="">
-            <span>1</span>
-            <h5>Bulbasaur</h5>
-            <p class="fst-italic">Erba</p>
-        </div>
+    <div class="card p-4 text-center">
+        <img class="rounded-circle " :src="image" :alt="pokemonName">
+        <span>{{ pokemonNumber }}</span>
+        <h5>{{ pokemonName }}</h5>
+        <p class="fst-italic">{{ type }}</p>
     </div>
 </template>
 <style></style>
