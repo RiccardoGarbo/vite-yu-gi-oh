@@ -4,11 +4,12 @@ export default {
     data: () => ({
         pokemonTypes: ["Bug", "Dark", "Dragon", "Electric", "Fairy", "Fighting", "Fire", "Flying", "Ghost", "Grass", "Ground", "Ice", "Normal", "Poison", "Psychic", "Rock", "Steel", "Water"],
         selectedType: ''
-    })
+    }),
+    emits: ['select-choice']
 }
 </script>
 <template>
-    <select class="form-select " v-model="selectedType">
+    <select class="form-select " v-model="selectedType" @change="this.$emit('select-choice', this.selectedType)">
         <option selected>Scegli il tipo!</option>
         <option v-for="(type, i) in pokemonTypes" :key="i" :value="type">{{ type }}
         </option>
