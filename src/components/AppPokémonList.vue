@@ -13,12 +13,11 @@ export default {
 <template>
     <section id="pokémonList" class="container bg-secondary-subtle p-5">
         <div class="row h-100 d-flex flex-wrap bg-secondary">
-            <div v-for="pokemon in store.pokemonList" class="col-2 h-50 d-flex align-items-center">
+            <div v-for="pokemon in store.pokemonList" :key="pokemon._id" class="col-2 h-50 d-flex align-items-center">
                 <PokémonCard :pokemonName="pokemon.name" :pokemonNumber="pokemon.number" :image="pokemon.imageUrl"
                     :type="pokemon.type1" />
             </div>
         </div>
-
     </section>
 </template>
 <style>
