@@ -6,8 +6,6 @@ export default {
         image: String,
         type: String,
         pokemonNumber: Number
-
-
     }
 
 }
