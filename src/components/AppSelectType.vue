@@ -1,11 +1,9 @@
 <script>
 export default {
     name: 'Select-Type',
-    data: () => ({
-        pokemonTypes: ["Bug", "Dark", "Dragon", "Electric", "Fairy", "Fighting", "Fire", "Flying", "Ghost", "Grass", "Ground", "Ice", "Normal", "Poison", "Psychic", "Rock", "Steel", "Water"],
-        selectedType: ''
-    }),
-    emits: ['select-choice']
+    props: { pokemonTypes: Array },
+    emits: ['select-choice'],
+
 }
 </script>
 <template>

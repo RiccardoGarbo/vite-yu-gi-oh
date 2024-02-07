@@ -12,10 +12,12 @@ export default {
 </script>
 <template>
     <div class="card p-4 text-center">
-        <img class="rounded-circle " :src="image" :alt="pokemonName">
+        <figure>
+            <img class="img-fluid" :src="image" :alt="pokemonName">
+        </figure>
         <span>{{ pokemonNumber }}</span>
         <h5>{{ pokemonName }}</h5>
         <p class="fst-italic">{{ type }}</p>
     </div>
 </template>
-<style></style>
+<style scoped></style>
